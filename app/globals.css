@@ -1,26 +1,72 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --nn-blue: #3fc3e0;
+  --nn-blue-deep: #1d9dbd;
+  --nn-blue-soft: #e8f8fc;
+  --nn-ink: #17324a;
+  --nn-muted: #64798d;
+  --nn-lime: #d8f259;
+  --nn-blush: #ffd3dd;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-nn-blue: var(--nn-blue);
+  --color-nn-blue-deep: var(--nn-blue-deep);
+  --color-nn-blue-soft: var(--nn-blue-soft);
+  --color-nn-ink: var(--nn-ink);
+  --color-nn-muted: var(--nn-muted);
+  --color-nn-lime: var(--nn-lime);
+  --color-nn-blush: var(--nn-blush);
+  --font-sans: var(--font-noto-kr);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: var(--nn-ink);
+  font-family: var(--font-noto-kr), "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
 }
+
+/* ---- exercise animations ---- */
+
+@keyframes nnUpDown {
+  from { transform: translateY(-84px); }
+  to { transform: translateY(84px); }
+}
+@keyframes nnLeftRight {
+  from { transform: translateX(-104px); }
+  to { transform: translateX(104px); }
+}
+@keyframes nnOrbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes nnOrbitCounter {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+@keyframes nnBlinkEye {
+  0%, 38%, 100% { transform: scaleY(1); }
+  50%, 62% { transform: scaleY(0.06); }
+}
+@keyframes nnMascotBlink {
+  0%, 91%, 100% { transform: scaleY(1); }
+  94%, 96% { transform: scaleY(0.08); }
+}
+@keyframes nnFloat {
+  from { transform: translateY(0); }
+  to { transform: translateY(-12px); }
+}
+@keyframes nnPopIn {
+  from { transform: scale(0.6); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.nn-anim-updown { animation: nnUpDown 2.4s ease-in-out infinite alternate; }
+.nn-anim-leftright { animation: nnLeftRight 2.4s ease-in-out infinite alternate; }
+.nn-orbit { animation: nnOrbit 4.8s linear infinite; }
+.nn-orbit-counter { animation: nnOrbitCounter 4.8s linear infinite; }
+.nn-anim-blink { animation: nnBlinkEye 2s ease-in-out infinite; transform-origin: center; }
+.nn-mascot-blink { animation: nnMascotBlink 4.2s ease-in-out infinite; transform-origin: center 48%; }
+.nn-float { animation: nnFloat 2.6s ease-in-out infinite alternate; }
+.nn-pop { animation: nnPopIn 0.45s cubic-bezier(0.2, 1.4, 0.4, 1) both; }
