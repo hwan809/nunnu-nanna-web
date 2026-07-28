@@ -68,7 +68,7 @@ export default function TermsPage() {
 
         <section>
           <h2 className="text-xl font-bold">7. 문의</h2>
-          <p className="mt-2">hwankim809@gmail.com</p>
+          <p className="mt-2">support@mirinae.app</p>
         </section>
       </div>
     </main>

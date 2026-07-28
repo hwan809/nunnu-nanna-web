@@ -74,7 +74,7 @@ export default function PrivacyPage() {
           <p className="mt-2">
             책임자: 김환 (미리내 스튜디오)
             <br />
-            문의: hwankim809@gmail.com
+            문의: support@mirinae.app
           </p>
         </section>
 
