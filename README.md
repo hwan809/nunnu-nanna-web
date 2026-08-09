@@ -14,6 +14,10 @@
 
 </div>
 
+<p align="center">
+  <img src="docs/screenshot.jpg" width="720" alt="눈누난나 스크린샷" />
+</p>
+
 ---
 
 ## 소개
